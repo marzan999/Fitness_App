@@ -33,7 +33,7 @@ class _ThumbnailPageState extends State<ThumbnailPage> {
                 right: 20,
                 child: SleekCircularSlider(
                   min: 0,
-                  max: 30,
+                  max: 10,
                   initialValue: second.toDouble(),
                   onChange: (double value) {
                     setState(() {
@@ -56,6 +56,7 @@ class _ThumbnailPageState extends State<ThumbnailPage> {
                             Navigator.of(context).push(MaterialPageRoute(
                                 builder: (context) => GifPage(
                                       exercise: widget.exercise,
+                                      second: second,
                                     )));
                           },
                           child: Text('Start'),
